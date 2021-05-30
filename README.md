@@ -3,6 +3,7 @@
 # TEST STRATEGY
 ## Feature to be tested
 - An individual client should be able to create a fixed contract
+- An individual client should be able to create a milestone contract
 
 ## Feature not to be tested
 - An individual client should be able to create a pay as you go contract
