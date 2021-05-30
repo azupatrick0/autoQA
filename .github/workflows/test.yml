@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+        repo-token: ${{secrets.GITHUB_TOKEN}}
+
+    - name: Install
+      uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30
+      with:
+        args: npm install
+    - name: Test
+      uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30
+      with:
+        args: npm test
+      env:
+        STAGING_URL: ${{secrets.STAGING_URL}}
