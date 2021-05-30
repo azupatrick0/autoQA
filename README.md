@@ -1,5 +1,8 @@
 # autoQA
 ![Test](https://github.com/azupatrick0/autoQA/workflows/Test/badge.svg)
+
+<img width="1439" alt="Screenshot 2021-05-30 at 18 32 46" src="https://user-images.githubusercontent.com/30567888/120114194-e5764580-c175-11eb-97bb-11c9bf5d77dd.png">
+
 # TEST STRATEGY
 ## Feature to be tested
 - An individual client should be able to create a fixed contract
